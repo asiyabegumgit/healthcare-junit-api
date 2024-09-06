@@ -96,6 +96,11 @@ class OfficeServiceTest {
         assertNull(officeService.getOfficeById(id1));
 
     }
+    @Test
+    void testGetOfficeById() {
+        Office office=officeService.getOfficeById(1);
+        assertNull(office);
+    }
 @ParameterizedTest
 @CsvSource("office_location.csv")
 void testCreateOfficeWithDifferentLocation(String officeName)
